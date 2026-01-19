@@ -1,2 +1,115 @@
-@import "tailwindcss";
+/* ========================================
+   GLOBAL STYLES - Restaurant Website
+   ======================================== */
 
+/* 1️⃣ Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+/* 2️⃣ CSS Variables */
+:root {
+  /* Spacing */
+  --space-xs: 0.5rem;  /* 8px */
+  --space-sm: 0.75rem; /* 12px */
+  --space-md: 1rem;    /* 16px */
+  --space-lg: 1.5rem;  /* 24px */
+  --space-xl: 2rem;    /* 32px */
+
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+}
+
+/* 3️⃣ Global Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.4;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+
+h1 { font-size: 1.5rem; }   /* 24px */
+h2 { font-size: 1.25rem; }  /* 20px */
+h3 { font-size: 1.125rem; } /* 18px */
+h4 { font-size: 1rem; }     /* 16px */
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* Utility Classes - Margin */
+.m-xs { margin: var(--space-xs); }
+.m-sm { margin: var(--space-sm); }
+.m-md { margin: var(--space-md); }
+.m-lg { margin: var(--space-lg); }
+.m-xl { margin: var(--space-xl); }
+
+/* Utility Classes - Padding */
+.p-xs { padding: var(--space-xs); }
+.p-sm { padding: var(--space-sm); }
+.p-md { padding: var(--space-md); }
+.p-lg { padding: var(--space-lg); }
+.p-xl { padding: var(--space-xl); }
+
+/* ========================================
+   RESPONSIVE TYPOGRAPHY & SPACING
+   ======================================== */
+
+/* Tablet: 768px – 1199px */
+@media (min-width: 48rem) {
+  body { font-size: 1.125rem; line-height: 1.5; }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+
+  :root {
+    --space-xs: 0.75rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 2.5rem;
+  }
+}
+
+/* Laptop/Desktop: 1200px+ */
+@media (min-width: 75rem) {
+  body { font-size: 1.5rem; line-height: 1.6; }
+
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2.25rem; }
+  h3 { font-size: 2rem; }
+  h4 { font-size: 1.75rem; }
+
+  :root {
+    --space-xs: 1rem;
+    --space-sm: 1.5rem;
+    --space-md: 2rem;
+    --space-lg: 3rem;
+    --space-xl: 4rem;
+  }
+}
