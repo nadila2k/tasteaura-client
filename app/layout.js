@@ -1,16 +1,33 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import Providers from "./providers";
-import "./globals.css"; 
+import { Playfair_Display, Lato } from "next/font/google";
+import "./globals.css";
 
-// Import fonts and create CSS variables
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+// Elegant restaurant font pairing
+const headingFont = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-heading",
+  display: "swap",
+});
+
+const bodyFont = Lato({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+export const metadata = {
+  title: "TasteAura | Restaurant",
+  description: "Premium dining experience",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Providers>{children}</Providers>
+      <body
+        className={`${headingFont.variable} ${bodyFont.variable} antialiased`}
+      >
+        {children}
       </body>
     </html>
   );

@@ -1,0 +1,16 @@
+/* Container to center content */
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+/* Text alignment helpers */
+.text-center {
+  text-align: center;
+}
+
+/* Margin helpers */
+.mt-lg {
+  margin-top: var(--space-lg);
+}

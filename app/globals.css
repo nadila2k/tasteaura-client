@@ -2,25 +2,27 @@
    GLOBAL STYLES - Restaurant Website
    ======================================== */
 
-/* 1️⃣ Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
-
-/* 2️⃣ CSS Variables */
+/* 1️⃣ CSS Variables */
 :root {
-  /* Spacing */
-  --space-xs: 0.5rem;  /* 8px */
-  --space-sm: 0.75rem; /* 12px */
-  --space-md: 1rem;    /* 16px */
-  --space-lg: 1.5rem;  /* 24px */
-  --space-xl: 2rem;    /* 32px */
+  /* Colors */
+  --color-bg: #ffffff;
+  --color-text: #222222;
+  --color-primary: #c59d5f; /* Gold accent */
+  --color-muted: #777777;
 
-  
-  /* Typography */
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Lato', sans-serif;
+  /* Spacing */
+  --space-xs: 0.5rem;  
+  --space-sm: 0.75rem; 
+  --space-md: 1rem;    
+  --space-lg: 1.5rem;  
+  --space-xl: 2rem;    
+
+  /* Fonts */
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
 
-/* 3️⃣ Global Reset */
+/* 2️⃣ Reset */
 *,
 *::before,
 *::after {
@@ -29,45 +31,77 @@
   box-sizing: border-box;
 }
 
+/* 3️⃣ Body */
 body {
   font-family: var(--font-body);
-  font-size: 0.875rem; /* 14px */
-  line-height: 1.4;
+  font-size: 1rem; /* 16px */
+  line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
+/* 4️⃣ Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
-  line-height: 1.4;
-  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  margin-bottom: var(--space-sm);
+  color: #111;
 }
 
-h1 { font-size: 1.5rem; }   /* 24px */
-h2 { font-size: 1.25rem; }  /* 20px */
-h3 { font-size: 1.125rem; } /* 18px */
-h4 { font-size: 1rem; }     /* 16px */
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
 
-/* Links */
+/* 5️⃣ Text */
+p {
+  margin-bottom: var(--space-md);
+  color: var(--color-muted);
+}
+
+/* 6️⃣ Links */
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.2s ease;
 }
 
 a:hover {
   color: var(--color-primary);
 }
 
-/* Utility Classes - Margin */
+/* 7️⃣ Buttons */
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* 8️⃣ Utility Spacing */
 .m-xs { margin: var(--space-xs); }
 .m-sm { margin: var(--space-sm); }
 .m-md { margin: var(--space-md); }
 .m-lg { margin: var(--space-lg); }
 .m-xl { margin: var(--space-xl); }
 
-/* Utility Classes - Padding */
 .p-xs { padding: var(--space-xs); }
 .p-sm { padding: var(--space-sm); }
 .p-md { padding: var(--space-md); }
@@ -78,14 +112,14 @@ a:hover {
    RESPONSIVE TYPOGRAPHY & SPACING
    ======================================== */
 
-/* Tablet: 768px – 1199px */
+/* Tablet */
 @media (min-width: 48rem) {
-  body { font-size: 1.125rem; line-height: 1.5; }
+  body { font-size: 1.125rem; }
 
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
-  h4 { font-size: 1.25rem; }
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.7rem; }
+  h4 { font-size: 1.4rem; }
 
   :root {
     --space-xs: 0.75rem;
@@ -96,14 +130,14 @@ a:hover {
   }
 }
 
-/* Laptop/Desktop: 1200px+ */
+/* Desktop */
 @media (min-width: 75rem) {
-  body { font-size: 1.5rem; line-height: 1.6; }
+  body { font-size: 1.2rem; }
 
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2.25rem; }
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2.3rem; }
   h3 { font-size: 2rem; }
-  h4 { font-size: 1.75rem; }
+  h4 { font-size: 1.6rem; }
 
   :root {
     --space-xs: 1rem;
