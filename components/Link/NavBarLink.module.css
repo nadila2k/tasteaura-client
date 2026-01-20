@@ -1,0 +1,8 @@
+/* NavBarLink.module.css */
+.activeLink {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 700;
+  color: #c59d5f; /* gold accent color */
+  transition: all 0.3s;
+}

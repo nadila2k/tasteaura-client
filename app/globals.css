@@ -4,22 +4,33 @@
 
 /* 1️⃣ CSS Variables */
 :root {
-  /* Colors */
-  --color-bg: #ffffff;
-  --color-text: #222222;
-  --color-primary: #c59d5f; /* Gold accent */
-  --color-muted: #777777;
 
-  /* Spacing */
+  --color-bg: #fffaf5;       /* Main page background */
+  --color-surface: #ffffff;  /* Cards, modals, sections */
+  --color-section: #fdf5e6;  /* Alternate section background */
+  --color-text: #333333;     /* Body text */
+  --color-muted: #666666;    /* Subtext */
+  --color-heading: #111111;  /* Headings */
+  --color-subheading: #555555; 
+  --color-primary: #c59d5f;  /* Gold accent (matches logo) */
+  --color-primary-dark: #a67c3a;
+  --color-link: #c59d5f;
+  --color-link-hover: #a67c3a;
+
+  /* ===========================
+     SPACING
+     =========================== */
   --space-xs: 0.5rem;  
   --space-sm: 0.75rem; 
   --space-md: 1rem;    
   --space-lg: 1.5rem;  
   --space-xl: 2rem;    
 
-  /* Fonts */
-  --font-heading: var(--font-heading);
-  --font-body: var(--font-body);
+  /* ===========================
+     FONTS
+     =========================== */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
 }
 
 /* 2️⃣ Reset */
@@ -37,7 +48,6 @@ body {
   font-size: 1rem; /* 16px */
   line-height: 1.6;
   color: var(--color-text);
-  background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -146,4 +156,23 @@ button:hover {
     --space-lg: 3rem;
     --space-xl: 4rem;
   }
+}
+
+
+/* ============================
+   MODERN CONTAINER SYSTEM (rem-based)
+============================ */
+.container {
+  padding-left: clamp(1rem, 4vw, 3rem);
+  padding-right: clamp(1rem, 4vw, 3rem);
+}
+
+.container-sm {
+  padding-left: clamp(1rem, 3vw, 2.5rem);
+  padding-right: clamp(1rem, 3vw, 2.5rem);
+}
+
+.container-lg {
+  padding-left: clamp(1.5rem, 5vw, 4rem);
+  padding-right: clamp(1.5rem, 5vw, 4rem);
 }
