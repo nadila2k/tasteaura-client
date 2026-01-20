@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.facilitiesSection {
+  margin-bottom: var(--space-lg); /* needed for overlay */
+}
+.flexContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+ 
+}
+
+
+.flexContainer > div {
+  flex: 1; /* makes both divs equal width */
+}
+.textContent h1,
+.textContent h2 {
+  color: var(--color-heading-main); /* black */
+}
+
+.textContent h3 {
+  color: var(--color-primary-dark); /* dark gold/orange */
+}
+
+.textContent p {
+  color: var(--color-heading-sub); /* grey */
+}

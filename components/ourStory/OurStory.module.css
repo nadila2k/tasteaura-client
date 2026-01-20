@@ -7,7 +7,7 @@
 }
 
 .ourstorysection {
-  height: 75vh;
+  
   margin-bottom: var(--space-lg);
 }
 
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
  
 }
 
@@ -60,6 +60,8 @@
   .flexContainer {
     flex-direction: column; /* stack text above logo */
     gap: 1rem;
+    align-items: center;        /* center items horizontally */
+    text-align: center;  
   }
 
 
@@ -85,6 +87,8 @@
   .flexContainer {
     flex-direction: column; /* stack text above logo */
     gap: 1rem;
+    align-items: center;        /* center items horizontally */
+    text-align: center;  
   }
 
   .logoWrapper img {
