@@ -4,7 +4,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa";
 import styles from "./Header.module.css";
-import logo from "@/public/image/tasteaura-logo.png";
+import logo from "@/public/image/logo/tasteaura-logo.png";
 import NavBarLink from "../Link/NavBarLink";
 
 export default function Header() {

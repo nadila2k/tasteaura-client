@@ -4,15 +4,14 @@
 
 /* 1️⃣ CSS Variables */
 :root {
-
-  --color-bg: #fffaf5;       /* Main page background */
-  --color-surface: #ffffff;  /* Cards, modals, sections */
-  --color-section: #fdf5e6;  /* Alternate section background */
-  --color-text: #333333;     /* Body text */
-  --color-muted: #666666;    /* Subtext */
-  --color-heading: #111111;  /* Headings */
-  --color-subheading: #555555; 
-  --color-primary: #c59d5f;  /* Gold accent (matches logo) */
+  --color-bg: #fffaf5; /* Main page background */
+  --color-surface: #ffffff; /* Cards, modals, sections */
+  --color-section: #fdf5e6; /* Alternate section background */
+  --color-text: #333333; /* Body text */
+  --color-muted: #666666; /* Subtext */
+  --color-heading: #111111; /* Headings */
+  --color-subheading: #555555;
+  --color-primary: #b8860b; /* Gold accent (matches logo) */
   --color-primary-dark: #a67c3a;
   --color-link: #c59d5f;
   --color-link-hover: #a67c3a;
@@ -20,17 +19,17 @@
   /* ===========================
      SPACING
      =========================== */
-  --space-xs: 0.5rem;  
-  --space-sm: 0.75rem; 
-  --space-md: 1rem;    
-  --space-lg: 1.5rem;  
-  --space-xl: 2rem;    
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
 
   /* ===========================
      FONTS
      =========================== */
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Lato', sans-serif;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Lato", sans-serif;
 }
 
 /* 2️⃣ Reset */
@@ -67,10 +66,18 @@ h6 {
   color: #111;
 }
 
-h1 { font-size: 2rem; }
-h2 { font-size: 1.75rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
 
 /* 5️⃣ Text */
 p {
@@ -106,17 +113,37 @@ button:hover {
 }
 
 /* 8️⃣ Utility Spacing */
-.m-xs { margin: var(--space-xs); }
-.m-sm { margin: var(--space-sm); }
-.m-md { margin: var(--space-md); }
-.m-lg { margin: var(--space-lg); }
-.m-xl { margin: var(--space-xl); }
+.m-xs {
+  margin: var(--space-xs);
+}
+.m-sm {
+  margin: var(--space-sm);
+}
+.m-md {
+  margin: var(--space-md);
+}
+.m-lg {
+  margin: var(--space-lg);
+}
+.m-xl {
+  margin: var(--space-xl);
+}
 
-.p-xs { padding: var(--space-xs); }
-.p-sm { padding: var(--space-sm); }
-.p-md { padding: var(--space-md); }
-.p-lg { padding: var(--space-lg); }
-.p-xl { padding: var(--space-xl); }
+.p-xs {
+  padding: var(--space-xs);
+}
+.p-sm {
+  padding: var(--space-sm);
+}
+.p-md {
+  padding: var(--space-md);
+}
+.p-lg {
+  padding: var(--space-lg);
+}
+.p-xl {
+  padding: var(--space-xl);
+}
 
 /* ========================================
    RESPONSIVE TYPOGRAPHY & SPACING
@@ -124,12 +151,22 @@ button:hover {
 
 /* Tablet */
 @media (min-width: 48rem) {
-  body { font-size: 1.125rem; }
+  body {
+    font-size: 1.125rem;
+  }
 
-  h1 { font-size: 2.4rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.7rem; }
-  h4 { font-size: 1.4rem; }
+  h1 {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+  h4 {
+    font-size: 1.4rem;
+  }
 
   :root {
     --space-xs: 0.75rem;
@@ -142,12 +179,22 @@ button:hover {
 
 /* Desktop */
 @media (min-width: 75rem) {
-  body { font-size: 1.2rem; }
+  body {
+    font-size: 1.2rem;
+  }
 
-  h1 { font-size: 2.8rem; }
-  h2 { font-size: 2.3rem; }
-  h3 { font-size: 2rem; }
-  h4 { font-size: 1.6rem; }
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2.3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.6rem;
+  }
 
   :root {
     --space-xs: 1rem;
@@ -157,7 +204,6 @@ button:hover {
     --space-xl: 4rem;
   }
 }
-
 
 /* ============================
    MODERN CONTAINER SYSTEM (rem-based)

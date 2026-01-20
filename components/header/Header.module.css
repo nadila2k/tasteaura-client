@@ -47,7 +47,6 @@
   cursor: pointer;
 }
 
-/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -59,7 +58,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
-  background: var(--color-surface);
+  background: rgba(0, 0, 0, 0.85); /* darker black */
   z-index: 1001;
   animation: slideIn 0.3s forwards;
 }
@@ -100,7 +99,7 @@
   align-self: flex-end;
   cursor: pointer;
   font-size: 1.5rem;
-  color: var(--color-text);
+  color: var(--color-surface);;
   margin-bottom: var(--space-lg);
 }
 
@@ -122,15 +121,19 @@
   }
 }
 
-/* Header background states */
+/* Header with stronger black tint and more pronounced shadow */
 .headerTransparent {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0);
-  transition: background 0.3s, box-shadow 0.3s;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.5); /* black tint with 50% transparency */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  /* ↑ stronger shadow + subtle border-like effect */
+  transition: 
+    background 0.3s, 
+    box-shadow 0.3s;
   z-index: 1000;
+  color: #fff; /* make text readable on dark background */
 }
 
 .headerScrolled {
@@ -139,6 +142,8 @@
   width: 100%;
   background: var(--color-surface);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s, box-shadow 0.3s;
+  transition:
+    background 0.3s,
+    box-shadow 0.3s;
   z-index: 1000;
 }
