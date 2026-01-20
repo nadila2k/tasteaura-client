@@ -1,28 +1,11 @@
 import Hero from "@/components/hero/Hero";
+import OurStory from "@/components/ourStory/OurStory";
 
 export default function Home() {
   return (
     <>
       <Hero />
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
-        <div>lol</div>
+      <OurStory />
     </>
   );
 }

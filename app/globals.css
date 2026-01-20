@@ -1,33 +1,33 @@
 /* ========================================
    GLOBAL STYLES - Restaurant Website
+   Desktop-First
    ======================================== */
 
 /* 1️⃣ CSS Variables */
 :root {
-  --color-bg: #fffaf5; /* Main page background */
-  --color-surface: #ffffff; /* Cards, modals, sections */
-  --color-section: #fdf5e6; /* Alternate section background */
-  --color-text: #333333; /* Body text */
-  --color-muted: #666666; /* Subtext */
-  --color-heading: #111111; /* Headings */
+  /* COLORS */
+  --color-bg: #fffaf5;
+  --color-surface: #ffffff;
+  --color-section: #fdf5e6;
+  --color-text: #333333;
+  --color-muted: #666666;
+  --color-heading: #111111;
   --color-subheading: #555555;
-  --color-primary: #b8860b; /* Gold accent (matches logo) */
+  --color-primary: #b8860b;
   --color-primary-dark: #a67c3a;
   --color-link: #c59d5f;
   --color-link-hover: #a67c3a;
+  --color-heading-main: #000000;
+  --color-heading-sub: #3a3a3a;
 
-  /* ===========================
-     SPACING
-     =========================== */
-  --space-xs: 0.5rem;
-  --space-sm: 0.75rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
+  /* SPACING */
+  --space-xs: 1rem;
+  --space-sm: 1.5rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 4rem;
 
-  /* ===========================
-     FONTS
-     =========================== */
+  /* FONTS */
   --font-heading: "Playfair Display", serif;
   --font-body: "Lato", sans-serif;
 }
@@ -44,7 +44,7 @@
 /* 3️⃣ Body */
 body {
   font-family: var(--font-body);
-  font-size: 1rem; /* 16px */
+  font-size: 1.2rem; /* Desktop default */
   line-height: 1.6;
   color: var(--color-text);
   -webkit-font-smoothing: antialiased;
@@ -52,37 +52,24 @@ body {
 }
 
 /* 4️⃣ Headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.03em;
   margin-bottom: var(--space-sm);
-  color: #111;
+  color: var(--color-heading-main);
 }
 
-h1 {
-  font-size: 2rem;
-}
-h2 {
-  font-size: 1.75rem;
-}
-h3 {
-  font-size: 1.5rem;
-}
-h4 {
-  font-size: 1.25rem;
-}
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.3rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.6rem; }
 
-/* 5️⃣ Text */
+/* 5️⃣ Paragraphs */
 p {
   margin-bottom: var(--space-md);
-  color: var(--color-muted);
+  color: var(--color-heading-sub);
 }
 
 /* 6️⃣ Links */
@@ -113,101 +100,19 @@ button:hover {
 }
 
 /* 8️⃣ Utility Spacing */
-.m-xs {
-  margin: var(--space-xs);
-}
-.m-sm {
-  margin: var(--space-sm);
-}
-.m-md {
-  margin: var(--space-md);
-}
-.m-lg {
-  margin: var(--space-lg);
-}
-.m-xl {
-  margin: var(--space-xl);
-}
+.m-xs { margin: var(--space-xs); }
+.m-sm { margin: var(--space-sm); }
+.m-md { margin: var(--space-md); }
+.m-lg { margin: var(--space-lg); }
+.m-xl { margin: var(--space-xl); }
 
-.p-xs {
-  padding: var(--space-xs);
-}
-.p-sm {
-  padding: var(--space-sm);
-}
-.p-md {
-  padding: var(--space-md);
-}
-.p-lg {
-  padding: var(--space-lg);
-}
-.p-xl {
-  padding: var(--space-xl);
-}
+.p-xs { padding: var(--space-xs); }
+.p-sm { padding: var(--space-sm); }
+.p-md { padding: var(--space-md); }
+.p-lg { padding: var(--space-lg); }
+.p-xl { padding: var(--space-xl); }
 
-/* ========================================
-   RESPONSIVE TYPOGRAPHY & SPACING
-   ======================================== */
-
-/* Tablet */
-@media (min-width: 48rem) {
-  body {
-    font-size: 1.125rem;
-  }
-
-  h1 {
-    font-size: 2.4rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.7rem;
-  }
-  h4 {
-    font-size: 1.4rem;
-  }
-
-  :root {
-    --space-xs: 0.75rem;
-    --space-sm: 1rem;
-    --space-md: 1.5rem;
-    --space-lg: 2rem;
-    --space-xl: 2.5rem;
-  }
-}
-
-/* Desktop */
-@media (min-width: 75rem) {
-  body {
-    font-size: 1.2rem;
-  }
-
-  h1 {
-    font-size: 2.8rem;
-  }
-  h2 {
-    font-size: 2.3rem;
-  }
-  h3 {
-    font-size: 2rem;
-  }
-  h4 {
-    font-size: 1.6rem;
-  }
-
-  :root {
-    --space-xs: 1rem;
-    --space-sm: 1.5rem;
-    --space-md: 2rem;
-    --space-lg: 3rem;
-    --space-xl: 4rem;
-  }
-}
-
-/* ============================
-   MODERN CONTAINER SYSTEM (rem-based)
-============================ */
+/* 9️⃣ Container System */
 .container {
   padding-left: clamp(1rem, 4vw, 3rem);
   padding-right: clamp(1rem, 4vw, 3rem);
@@ -221,4 +126,44 @@ button:hover {
 .container-lg {
   padding-left: clamp(1.5rem, 5vw, 4rem);
   padding-right: clamp(1.5rem, 5vw, 4rem);
+}
+
+/* ========================================
+   RESPONSIVE TYPOGRAPHY & SPACING
+   ======================================== */
+
+/* Tablet: max-width 1199px (~75rem) */
+@media (max-width: 74.99rem) {
+  body { font-size: 1.125rem; }
+
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.7rem; }
+  h4 { font-size: 1.4rem; }
+
+  :root {
+    --space-xs: 0.75rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 2.5rem;
+  }
+}
+
+/* Mobile: max-width 767px (~48rem) */
+@media (max-width: 47.99rem) {
+  body { font-size: 1rem; }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+
+  :root {
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+  }
 }
