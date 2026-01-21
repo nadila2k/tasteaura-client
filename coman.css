@@ -1,0 +1,80 @@
+/* Container */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 10%;   /* keep percentage */
+  padding-right: 10%;  /* keep percentage */
+  height: 100%;
+}
+
+/* Sections */
+.section {
+  margin-bottom: var(--space-lg);  /* use global spacing variable */
+}
+
+/* Flex Container */
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-lg);  /* spacing between flex items using global variable */
+}
+
+/* Flex items */
+.flexContainer > .flex1,
+.flexContainer > .flex2 {
+  flex: 1;
+}
+
+/* Text content colors */
+.textContent h1,
+.textContent h2 {
+  color: var(--color-heading-main);
+}
+
+.textContent h3 {
+  color: var(--color-primary-dark);
+}
+
+.textContent p {
+  color: var(--color-heading-sub);
+}
+
+/* ========================================
+   RESPONSIVE - Tablet
+   ======================================== */
+@media (max-width: 74.99rem) {
+  .container {
+    padding-left: 8%;   /* smaller percentage for tablet */
+    padding-right: 8%;
+  }
+
+  .section {
+    margin-bottom: var(--space-md); /* slightly smaller spacing */
+  }
+
+  .flexContainer {
+    flex-direction: column;  /* stack items vertically */
+    gap: var(--space-md);    /* smaller gap for tablet */
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Mobile
+   ======================================== */
+@media (max-width: 47.99rem) {
+  .container {
+    padding-left: 5%;   /* smaller percentage for mobile */
+    padding-right: 5%;
+  }
+
+  .section {
+    margin-bottom: var(--space-sm); /* smaller spacing */
+  }
+
+  .flexContainer {
+    flex-direction: column;  /* stack items vertically */
+    gap: var(--space-sm);     /* smaller gap for mobile */
+  }
+}

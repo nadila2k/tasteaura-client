@@ -7,19 +7,17 @@
 }
 
 .ourstorysection {
-  
   margin-bottom: var(--space-lg);
 }
 
 .flexContainer {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
- 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  gap: var(--space-lg);
 }
-
 
 .flexContainer > div,
 .flexContainer > .logoWrapper {
@@ -53,26 +51,38 @@
    Tablet (48rem – 74.99rem)
    ========================== */
 @media (max-width: 74.99rem) {
+
+  .container {
+    padding-left: 8%;   /* smaller percentage for tablet */
+    padding-right: 8%;
+  }
   .ourstorysection {
-    height: 80vh; /* slightly smaller height */
+    margin-bottom: var(--space-md);
   }
 
   .flexContainer {
     flex-direction: column; /* stack text above logo */
-    gap: 1rem;
-    align-items: center;        /* center items horizontally */
-    text-align: center;  
+     gap: var(--space-md); 
+    align-items: center; /* center items horizontally */
+    text-align: center;
   }
-
 
   .logoWrapper img {
     width: 200px; /* smaller logo */
   }
 
-  .textContent h1 { font-size: 2.4rem; }
-  .textContent h2 { font-size: 2rem; }
-  .textContent h3 { font-size: 1.7rem; }
-  .textContent p { font-size: 1.1rem; }
+  .textContent h1 {
+    font-size: 2.4rem;
+  }
+  .textContent h2 {
+    font-size: 2rem;
+  }
+  .textContent h3 {
+    font-size: 1.7rem;
+  }
+  .textContent p {
+    font-size: 1.1rem;
+  }
 }
 
 /* ==========================
@@ -80,23 +90,34 @@
    ========================== */
 @media (max-width: 47.99rem) {
   .ourstorysection {
-    height: 75vh;
-    padding: var(--space-md) 0;
-  }
+    margin-bottom: var(--space-sm); 
 
+  }
+.container {
+    padding-left: 5%;   /* smaller percentage for mobile */
+    padding-right: 5%;
+  }
   .flexContainer {
     flex-direction: column; /* stack text above logo */
-    gap: 1rem;
-    align-items: center;        /* center items horizontally */
-    text-align: center;  
+    margin-bottom: var(--space-sm);
+    align-items: center; /* center items horizontally */
+    text-align: center;
   }
 
   .logoWrapper img {
     width: 150px; /* mobile logo */
   }
 
-  .textContent h1 { font-size: 2rem; }
-  .textContent h2 { font-size: 1.75rem; }
-  .textContent h3 { font-size: 1.5rem; }
-  .textContent p { font-size: 0.95rem; }
+  .textContent h1 {
+    font-size: 2rem;
+  }
+  .textContent h2 {
+    font-size: 1.75rem;
+  }
+  .textContent h3 {
+    font-size: 1.5rem;
+  }
+  .textContent p {
+    font-size: 0.95rem;
+  }
 }
