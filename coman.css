@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: var(--space-lg);  /* spacing between flex items using global variable */
+  gap: var(--space-lg);  
 }
 
 /* Flex items */

@@ -67,6 +67,8 @@
   transition: background-image 0.4s ease;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 

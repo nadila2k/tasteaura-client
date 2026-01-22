@@ -1,10 +1,10 @@
 .button {
   background: transparent;
-  border: none;                         /* remove all borders */
-  border-bottom: 2px solid transparent; /* only bottom line */
-  border-radius: 0;                     /* no rounded corners */
+  border: none;                        
+  border-bottom: 2px solid transparent;
+  border-radius: 0;                     
   padding: 0.5rem 0.25rem;
-  margin-right: 1rem;                   /* will remove in grid mode */
+  margin-right: 1rem;                  
   font-size: 1.2rem;
   font-family: var(--font-heading);
   color: #666;
@@ -15,14 +15,14 @@
 }
 
 .button:hover {
-  color: #111;                         /* darker on hover */
-  border-bottom-color: #111;           /* bottom line shows */
+  color: #111;                        
+  border-bottom-color: #111;          
 }
 
-/* Active state */
+
 .active {
-  color: #000;                         /* solid dark */
-  border-bottom-color: #000;           /* only bottom line */
+  color: #000;                        
+  border-bottom-color: #000;          
 }
 
 /* ========================================
@@ -30,9 +30,9 @@
    ======================================== */
 @media (max-width: 74.99rem) {
   .button {
-    width: 100%;           /* fill the grid column */
-    margin-right: 0;       /* remove spacing, handled by grid gap */
-    font-size: 1.1rem;     /* slightly smaller font */
+    width: 100%;          
+    margin-right: 0;      
+    font-size: 1.1rem;     
     padding: 0.45rem 0.25rem;
   }
 }
@@ -42,7 +42,7 @@
    ======================================== */
 @media (max-width: 47.99rem) {
   .button {
-    font-size: 1rem;       /* smaller font on mobile */
+    font-size: 1rem;      
     padding: 0.4rem 0.2rem;
   }
 }

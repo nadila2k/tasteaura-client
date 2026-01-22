@@ -68,7 +68,7 @@ h4 { font-size: 1.6rem; }
 
 /* 5️⃣ Paragraphs */
 p {
-  margin-bottom: var(--space-md);
+  /* margin-bottom: var(--space-md); */
   color: var(--color-heading-sub);
 }
 

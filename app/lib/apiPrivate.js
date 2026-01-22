@@ -1,5 +1,7 @@
+// lib/apiPrivate.js
 import axios from "axios";
 import { getSession, signOut } from "next-auth/react";
+import { normalizeAxiosError } from "./apiError";
 
 const apiPrivate = axios.create({
   baseURL: process.env.NEXT_PUBLIC_BACKEND_URL + "/api/v1",
@@ -9,7 +11,6 @@ const apiPrivate = axios.create({
   },
 });
 
-// 👉 Attach token ONLY here
 apiPrivate.interceptors.request.use(
   async (config) => {
     const session = await getSession();
@@ -23,18 +24,15 @@ apiPrivate.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// 👉 Handle unauthorized globally
 apiPrivate.interceptors.response.use(
   (response) => response.data,
   async (error) => {
     if (error.response?.status === 401) {
-      console.warn("Token expired or unauthorized");
-
-      // optional: auto logout
+      console.warn("Unauthorized – logging out");
       await signOut({ redirect: true, callbackUrl: "/auth/signin" });
     }
 
-    return Promise.reject(error);
+    return Promise.reject(normalizeAxiosError(error));
   }
 );
 

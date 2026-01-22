@@ -1,5 +1,6 @@
 import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
+import ToastProvider from "@/components/toastProvider/ToastProvider";
 
 // Elegant restaurant font pairing
 const headingFont = Playfair_Display({
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         className={`${headingFont.variable} ${bodyFont.variable} antialiased`}
       >
         {children}
+        <ToastProvider />
       </body>
     </html>
   );

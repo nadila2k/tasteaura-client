@@ -1,0 +1,74 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;          /* 🔥 small gap */
+  padding: 0.4rem;     /* 🔥 equal space on both sides */
+  width: 100%;
+  min-height: 500px;
+}
+
+/* Card wrapper */
+.card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Image box */
+.image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Dark overlay for text readability */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Category name */
+.name {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   RESPONSIVE - Tablet
+   ======================================== */
+@media (max-width: 74.99rem) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 🔥 keep 3 columns */
+    gap: 0.35rem;
+    padding: 0.35rem;
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Mobile
+   ======================================== */
+@media (max-width: 47.99rem) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 🔥 2 columns only on mobile */
+    gap: 0.3rem;
+    padding: 0.3rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+}
