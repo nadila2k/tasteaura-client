@@ -32,9 +32,9 @@ export default function OurStory() {
             <Image
               src={logo}
               alt="TasteAura Logo"
-              width={400} // increased width
-              height={200} // increased height
-              quality={100} // max image quality for sharpness
+              width={400} 
+              height={200} 
+              quality={75} 
             />
           </div>
         </div>
