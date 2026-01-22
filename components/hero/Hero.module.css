@@ -77,6 +77,10 @@
 /* Responsive adjustments for small screens */
 @media (max-width: 768px) {
 
+  .heroSection {
+  height: 80vh;
+
+}
   .flexContainer {
     /* more padding on small screens */
     gap: var(--space-lg); /* larger spacing between elements */
