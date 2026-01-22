@@ -1,9 +1,11 @@
-import apiPublic from "@/app/lib/apiPublic";
+
 import styles from "./MenuHighlights.module.css";
 import MenuItem from "./MenuItem";
 import Link from "next/link";
 import { fetchMenuItems } from "@/app/services/menuService";
 import CategoriesHighlights from "./CategoriesHighlights";
+import { Suspense } from "react";
+import SectionLoader from "../sectionLoader/SectionLoader";
 
 export default async function MenuHighlights() {
   const menuItems = await fetchMenuItems();
@@ -25,7 +27,9 @@ export default async function MenuHighlights() {
             </Link>
           </div>
           <div className={styles.media}>
-            <CategoriesHighlights/>
+            <Suspense fallback={<SectionLoader />}>
+          <CategoriesHighlights />
+        </Suspense>
           </div>
         </div>
       </div>

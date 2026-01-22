@@ -1,18 +1,26 @@
-// lib/apiPublic.js
 import axios from "axios";
-import { normalizeAxiosError } from "./apiError";
+import { handleApiError } from "./handleApiError";
 
 const apiPublic = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_BACKEND_URL + "/api/v1",
+  baseURL: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1`,
   timeout: 100000,
   headers: {
     "Content-Type": "application/json",
   },
 });
 
+// Handle backend ApiResponse
 apiPublic.interceptors.response.use(
-  (response) => response.data, // unwrap ApiResponse
-  (error) => Promise.reject(normalizeAxiosError(error))
+  (response) => {
+    const apiResponse = response.data;
+
+    if (apiResponse.responseStatus !== "SUCCESS") {
+      return Promise.reject(apiResponse);
+    }
+
+    return apiResponse;
+  },
+  (error) => Promise.reject(handleApiError(error))
 );
 
 export default apiPublic;
