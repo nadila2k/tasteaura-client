@@ -1,18 +1,17 @@
-/* Container */
+
 .container {
   width: 100%;
   max-width: 100%;
-  padding-left: 10%;   /* keep percentage */
-  padding-right: 10%;  /* keep percentage */
+  padding-left: 10%;  
+  padding-right: 10%;  
   height: 100%;
 }
 
-/* Sections */
+
 .section {
-  margin-bottom: var(--space-lg);  /* use global spacing variable */
+  margin-bottom: var(--space-lg);  
 }
 
-/* Flex Container */
 .flexContainer {
   display: flex;
   justify-content: center;
@@ -21,13 +20,13 @@
   gap: var(--space-lg);  
 }
 
-/* Flex items */
+
 .flexContainer > .flex1,
 .flexContainer > .flex2 {
   flex: 1;
 }
 
-/* Text content colors */
+
 .textContent h1,
 .textContent h2 {
   color: var(--color-heading-main);
@@ -45,18 +44,22 @@
    RESPONSIVE - Tablet
    ======================================== */
 @media (max-width: 74.99rem) {
-  .container {
-    padding-left: 8%;   /* smaller percentage for tablet */
-    padding-right: 8%;
+  .button {
+    width: 90%; 
+    gap: 0.4rem; 
   }
 
-  .section {
-    margin-bottom: var(--space-md); /* slightly smaller spacing */
+  .imageContainer {
+    width: 6.5rem; 
+    height: 6.5rem;
+    border-radius: 0.75rem; 
+    box-shadow:
+      0 8px 12px -2px rgba(0, 0, 0, 0.1),
+      0 3px 4px -2px rgba(0, 0, 0, 0.05); 
   }
 
-  .flexContainer {
-    flex-direction: column;  /* stack items vertically */
-    gap: var(--space-md);    /* smaller gap for tablet */
+  .text {
+    font-size: 0.9rem; 
   }
 }
 
@@ -65,16 +68,16 @@
    ======================================== */
 @media (max-width: 47.99rem) {
   .container {
-    padding-left: 5%;   /* smaller percentage for mobile */
+    padding-left: 5%;   
     padding-right: 5%;
   }
 
   .section {
-    margin-bottom: var(--space-sm); /* smaller spacing */
+    margin-bottom: var(--space-sm); 
   }
 
   .flexContainer {
-    flex-direction: column;  /* stack items vertically */
-    gap: var(--space-sm);     /* smaller gap for mobile */
+    flex-direction: column; 
+    gap: var(--space-sm);     
   }
 }

@@ -1,0 +1,110 @@
+/* Button styling */
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  width: 100%; /* w-32 */
+  gap: 0.5rem;
+  background-color: white;
+  padding: 0;
+}
+
+.button:hover {
+  transform: scale(1.05); /* hover:scale-105 */
+}
+
+.selected {
+  border-bottom: 2px solid #fbbf24; /* straight yellow line */
+  border-radius: 0; /* no curve */
+  padding-bottom: 2px; /* optional for spacing */
+}
+/* Image container */
+.imageContainer {
+  width: 8rem; /* w-32 */
+  height: 8rem; /* h-32 */
+  border-radius: 1rem; /* rounded-2xl */
+  overflow: hidden;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  position: relative; /* for text overlay if needed */
+  display: flex;
+  align-items: flex-end; 
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.text {
+  color: #625009b9; 
+  font-weight: 500; 
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+@media (max-width: 74.99rem) {
+  .button {
+    width: 45%;         
+    gap: 0.4rem;        
+    padding: 0.25rem;
+  }
+
+  .imageContainer {
+    width: 7rem;        
+    height: 7rem;
+    border-radius: 0.8rem;
+  }
+
+  .text {
+    font-size: 0.95rem;  
+  }
+}
+
+@media (max-width: 74.99rem) {
+  .button {
+    width: 45%;          /* roughly 2 per row */
+    gap: 0.4rem;         /* slightly smaller gap */
+    padding: 0.25rem;
+  }
+
+  .imageContainer {
+    width: 7rem;         /* smaller image for tablet */
+    height: 7rem;
+    border-radius: 0.8rem;
+  }
+
+  .text {
+    font-size: 0.95rem;  /* slightly smaller text */
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Mobile
+   ======================================== */
+@media (max-width: 47.99rem) {
+  .button {
+    width: 48%;          /* 2 per row on small screens */
+    gap: 0.3rem;
+    padding: 0.2rem;
+  }
+
+  .imageContainer {
+    width: 6rem;         /* smaller image for mobile */
+    height: 6rem;
+    border-radius: 0.7rem;
+  }
+
+  .text {
+    font-size: 0.85rem;  /* smaller text for mobile */
+  }
+}

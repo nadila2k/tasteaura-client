@@ -1,0 +1,108 @@
+/* =========================
+   BASE LAYOUT
+   ========================= */
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  margin-bottom: var(--space-lg);
+  height: 50vh;
+  width: 100%;
+
+  background-image: url("/image/menuPage/mennu-cover.png");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  display: flex;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-lg);
+}
+
+/* =========================
+   TEXT STYLES
+   ========================= */
+
+.heroText {
+  color: var(--color-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block; /* important for centering underline */
+}
+
+/* Centered dark-gold underline */
+.heroText::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #6e5004;
+  border-radius: 2px;
+}
+
+@media (max-width: 74.99rem) {
+  .container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .section {
+    height: 45vh;
+  }
+
+  .heroText {
+    font-size: 2.25rem;
+  }
+
+  .flexContainer {
+    gap: var(--space-md);
+  }
+}
+
+/* =========================
+   RESPONSIVE - Mobile
+   ========================= */
+
+@media (max-width: 47.99rem) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .section {
+    height: 40vh;
+  }
+
+  .heroText::after {
+    width: 60px;
+    height: 3px;
+    bottom: -10px;
+  }
+  .flexContainer {
+    gap: var(--space-sm);
+  }
+}
