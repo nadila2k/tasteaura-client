@@ -1,0 +1,164 @@
+/* Full screen black background */
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Form wrapper */
+.formWrapper {
+  background-color: #111; /* Darker professional look */
+  padding: 3rem;
+  border-radius: 1rem;
+  width: 30rem;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s;
+}
+
+.formWrapper:hover {
+  transform: translateY(-5px);
+}
+
+/* Logo */
+.logo {
+  width: 6rem;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+
+/* Company name */
+.companyName {
+  color: var(--color-primary);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Subtitle */
+.subtitle {
+  color: #ccc;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Input group */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.inputGroup label {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.inputGroup input {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #333;
+  background-color: #222;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.inputGroup input:focus {
+  border-color: #00bfff;
+}
+
+/* Error text */
+.error {
+  color: #ff4d4f;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Submit button */
+.formWrapper button {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #00bfff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.formWrapper button:hover:not(:disabled) {
+  background-color: #009acd;
+  transform: translateY(-2px);
+}
+
+.formWrapper button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Signup link */
+.signupText {
+  margin-top: 1.5rem;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.signupLink {
+  color: #00bfff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.signupLink:hover {
+  color: #009acd;
+}
+
+/* ========================================
+   Responsive: Tablet
+   ======================================== */
+@media (max-width: 74.99rem) {
+  .formWrapper {
+    width: 25rem;
+    padding: 2rem;
+  }
+
+  .companyName {
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    width: 5rem;
+  }
+}
+
+/* ========================================
+   Responsive: Mobile
+   ======================================== */
+@media (max-width: 47.99rem) {
+  .formWrapper {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .companyName {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    width: 4rem;
+  }
+}
