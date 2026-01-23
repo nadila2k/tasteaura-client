@@ -1,22 +1,19 @@
 "use client";
 
-import { useSession, signOut } from "next-auth/react";
+import React from "react";
+import { signOut } from "next-auth/react";
 
 export default function Dashboard() {
-  const { data: session } = useSession();
+  const handleLogout = () => {
+    signOut({
+      callbackUrl: "/auth/signin",
+    });
+  };
 
   return (
     <div>
-      <h2>Dashboard</h2>
-
-      {session && (
-        <div>
-          <p>Welcome, {session.user.username || session.user.email}!</p>
-          <button onClick={() => signOut({ callbackUrl: "/auth/signin" })}>
-            Logout
-          </button>
-        </div>
-      )}
+      <h1>Welcome to Dashboard</h1>
+      <button onClick={handleLogout}>Logout</button>
     </div>
   );
 }
