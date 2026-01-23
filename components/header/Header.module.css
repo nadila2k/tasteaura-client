@@ -51,12 +51,14 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 70%; /* changed from 75% to 70% */
-  max-width: 300px;
+    width: 60%; /* narrower than before */
+    max-width: 250px; /* smaller max width */
   height: 100vh;
   padding: var(--space-lg);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: var(--space-lg);
   background: rgba(0, 0, 0, 0.85); /* darker black */
   z-index: 1001;
@@ -112,14 +114,14 @@
 }
 
 /* Mobile / Tablet */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .navDesktop {
     display: none;
   }
   .hamburger {
     display: block;
   }
-}
+} */
 
 /* Header with stronger black tint and more pronounced shadow */
 .headerTransparent {
@@ -146,4 +148,50 @@
     background 0.3s,
     box-shadow 0.3s;
   z-index: 1000;
+}
+
+@media (max-width: 74.99rem) { /* 1199px and below, typical tablet range */
+  .container {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .flexContainer {
+    gap: var(--space-md);
+  }
+
+  .navList {
+    gap: var(--space-md);
+  }
+
+  .logo img {
+    height: 4.5rem; /* slightly smaller logo for tablet */
+  }
+}
+
+@media (max-width: 47.99rem) { /* 767px and below */
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .flexContainer {
+    justify-content: space-between;
+  }
+
+  .logo img {
+    height: 4rem; /* smaller logo for mobile */
+  }
+
+  .navDesktop {
+    display: none; /* hide desktop nav */
+  }
+
+  .hamburger {
+    display: block; /* show hamburger menu */
+  }
+
+  .authIcon {
+    display: none; /* hide desktop auth icon */
+  }
 }

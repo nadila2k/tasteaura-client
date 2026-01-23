@@ -2,7 +2,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { FaBars, FaTimes } from "react-icons/fa";
+import Link from "next/link";
+import { FaBars, FaTimes, FaUser } from "react-icons/fa";
 import styles from "./Header.module.css";
 import logo from "@/public/image/logo/tasteaura-logo.png";
 import NavBarLink from "../Link/NavBarLink";
@@ -54,6 +55,11 @@ export default function Header() {
               ))}
             </ul>
           </nav>
+          <div className={styles.authIcon}>
+            <Link href="/auth/signin" aria-label="Login">
+              <FaUser size={22} />
+            </Link>
+          </div>
           <div
             className={styles.hamburger}
             onClick={() => setSidebarOpen(true)}
@@ -87,6 +93,11 @@ export default function Header() {
                 </NavBarLink>
               ))}
             </ul>
+            <div className={styles.sidebarAuthIcon}>
+              <Link href="/auth/signin" aria-label="Login">
+                <FaUser size={22} />
+              </Link>
+            </div>
           </div>
         </>
       )}
