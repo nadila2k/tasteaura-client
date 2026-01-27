@@ -30,7 +30,6 @@ export default function CartCard() {
 
   // If cart is empty
   if (items.length === 0) {
-    info("Your cart is empty!");
     return (
       <div className={styles.emptyCard}>
         <FaShoppingCart size={48} />
@@ -43,7 +42,7 @@ export default function CartCard() {
     );
   }
 
-  // Handlers with error handling and toast
+
   const handleAddItem = (item) => {
     try {
       addItem(item);
@@ -90,7 +89,6 @@ export default function CartCard() {
         info("Your cart is empty!");
         return;
       }
-      // Here you can integrate API call for order placement
       success("Order placed successfully!");
       clearCart();
     } catch (err) {
