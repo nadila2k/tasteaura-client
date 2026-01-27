@@ -52,39 +52,21 @@
 }
 
 
+
+
 @media (max-width: 74.99rem) {
   .button {
-    width: 45%;         
-    gap: 0.4rem;        
-    padding: 0.25rem;
+    width: 100%;
   }
 
   .imageContainer {
-    width: 7rem;        
+    width: 7rem;         
     height: 7rem;
     border-radius: 0.8rem;
   }
 
   .text {
     font-size: 0.95rem;  
-  }
-}
-
-@media (max-width: 74.99rem) {
-  .button {
-    width: 45%;          /* roughly 2 per row */
-    gap: 0.4rem;         /* slightly smaller gap */
-    padding: 0.25rem;
-  }
-
-  .imageContainer {
-    width: 7rem;         /* smaller image for tablet */
-    height: 7rem;
-    border-radius: 0.8rem;
-  }
-
-  .text {
-    font-size: 0.95rem;  /* slightly smaller text */
   }
 }
 
