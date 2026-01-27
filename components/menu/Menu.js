@@ -6,7 +6,6 @@ import CategorieGrid from "./CategorieGrid";
 import MenuitemGrid from "./MenuitemGrid";
 
 export default function Menu({ categories = [], menuItems = [] }) {
-  console.log(menuItems);
   const [selectedCategoryId, setSelectedCategoryId] = useState(
     categories.length > 0 ? categories[0].id : null,
   );
@@ -21,7 +20,6 @@ export default function Menu({ categories = [], menuItems = [] }) {
     selectedCategoryId === 1
       ? menuItems
       : menuItems.filter((item) => item.category?.id === selectedCategoryId);
-
 
   const filteredMenuItems = categoryFiltered.filter((item) => {
     const query = search.toLowerCase();

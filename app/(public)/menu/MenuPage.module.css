@@ -39,19 +39,20 @@
   gap: var(--space-lg);
 }
 
-/* =========================
-   TEXT STYLES
-   ========================= */
+.menuflex {
+  margin-bottom: var(--space-lg);
+}
+
 
 .heroText {
   color: var(--color-heading);
   font-size: 3rem;
   font-weight: 700;
   position: relative;
-  display: inline-block; /* important for centering underline */
+  display: inline-block; 
 }
 
-/* Centered dark-gold underline */
+
 .heroText::after {
   content: "";
   position: absolute;
@@ -83,9 +84,7 @@
   }
 }
 
-/* =========================
-   RESPONSIVE - Mobile
-   ========================= */
+
 
 @media (max-width: 47.99rem) {
   .container {

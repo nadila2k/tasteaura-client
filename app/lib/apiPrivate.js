@@ -1,21 +1,56 @@
-const BASE_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1`;
+import axios from "axios";
+import { getSession } from "next-auth/react";
+import { handleApiError } from "./handleApiError";
 
-export async function fetchMenuItems() {
-  const res = await fetch(`${BASE_URL}/menu-items`, {
-    next: { revalidate: 60 }, // ISR: revalidate every 60s
-  });
+const apiPrivate = axios.create({
+  baseURL: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1`,
+  timeout: 100000,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
 
-  if (!res.ok) {
-    console.error("Failed to fetch menu items");
-    return [];
+/**
+ * REQUEST INTERCEPTOR
+ * → Attach JWT from NextAuth session
+ */
+apiPrivate.interceptors.request.use(
+  async (config) => {
+    const session = await getSession();
+
+    if (session?.accessToken) {
+      config.headers.Authorization = `Bearer ${session.accessToken}`;
+    }
+
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+/**
+ * RESPONSE INTERCEPTOR
+ * → Handle ApiResponse wrapper
+ * → Handle auth errors (401 / 403)
+ */
+apiPrivate.interceptors.response.use(
+  (response) => {
+    const apiResponse = response.data;
+
+    if (apiResponse.responseStatus !== "SUCCESS") {
+      return Promise.reject(apiResponse);
+    }
+
+    return apiResponse;
+  },
+  (error) => {
+    // Optional: auto logout on token expiry
+    if (error.response?.status === 401) {
+      // window.location.href = "/auth/signin";
+      console.warn("Unauthorized – token may be expired");
+    }
+
+    return Promise.reject(handleApiError(error));
   }
+);
 
-  const apiResponse = await res.json();
-
-  if (apiResponse.responseStatus !== "SUCCESS") {
-    console.error(apiResponse.message);
-    return [];
-  }
-
-  return apiResponse.data;
-}
+export default apiPrivate;

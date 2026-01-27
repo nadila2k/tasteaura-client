@@ -3,9 +3,8 @@ import styles from "./MenuPage.module.css";
 import { fetchCategories } from "@/app/services/categoryService";
 import { fetchMenuItems } from "@/app/services/menuService";
 
-export default async function  MenuPage() {
-
-    const categories = await fetchCategories();
+export default async function MenuPage() {
+  const categories = await fetchCategories();
   const menuItems = await fetchMenuItems();
   return (
     <div className={styles.flexContainer}>
@@ -17,8 +16,8 @@ export default async function  MenuPage() {
         </div>
       </section>
 
-      <div>
-       <Menu categories={categories} menuItems={menuItems} />;
+      <div className={styles.menuflex}>
+        <Menu categories={categories} menuItems={menuItems} />
       </div>
     </div>
   );
