@@ -10,10 +10,7 @@ const apiPrivate = axios.create({
   },
 });
 
-/**
- * REQUEST INTERCEPTOR
- * → Attach JWT from NextAuth session
- */
+
 apiPrivate.interceptors.request.use(
   async (config) => {
     const session = await getSession();
@@ -27,11 +24,7 @@ apiPrivate.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-/**
- * RESPONSE INTERCEPTOR
- * → Handle ApiResponse wrapper
- * → Handle auth errors (401 / 403)
- */
+
 apiPrivate.interceptors.response.use(
   (response) => {
     const apiResponse = response.data;

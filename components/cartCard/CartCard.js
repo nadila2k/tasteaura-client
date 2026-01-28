@@ -1,17 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import { FaPlus, FaMinus, FaTrash, FaShoppingCart, FaTimes } from "react-icons/fa";
+import {
+  FaPlus,
+  FaMinus,
+  FaTrash,
+  FaShoppingCart,
+  FaTimes,
+} from "react-icons/fa";
 import { useSession } from "next-auth/react";
 import { getCartStore } from "@/app/store/cartStore";
-
 import styles from "./CartCard.module.css";
 import Link from "next/link";
 import { useToast } from "@/hooks/useToast";
+import CheckoutModal from "./CheckoutModal";
+import { useState } from "react";
+import { createOrder } from "@/app/services/orderService";
 
 export default function CartCard() {
   const { data: session, status } = useSession();
   const { success, error, info } = useToast();
+  const [showCheckout, setShowCheckout] = useState(false);
 
   const userEmail = session?.user?.email || "guest";
   const useCart = getCartStore(userEmail);
@@ -28,7 +37,7 @@ export default function CartCard() {
 
   if (status !== "authenticated") return null;
 
-  // If cart is empty
+  // Empty cart
   if (items.length === 0) {
     return (
       <div className={styles.emptyCard}>
@@ -42,64 +51,60 @@ export default function CartCard() {
     );
   }
 
-
   const handleAddItem = (item) => {
-    try {
-      addItem(item);
-      success(`Added ${item.name} to cart`);
-    } catch (err) {
-      console.error(err);
-      error(`Failed to add ${item.name}`);
-    }
+    addItem(item);
+    success(`Added ${item.name} to cart`);
   };
 
   const handleDecreaseItem = (item) => {
-    try {
-      decreaseItem(item.id);
-      success(`Decreased quantity of ${item.name}`);
-    } catch (err) {
-      console.error(err);
-      error(`Failed to decrease ${item.name}`);
-    }
+    decreaseItem(item.id);
+    info(`Decreased quantity of ${item.name}`);
   };
 
   const handleRemoveItem = (item) => {
-    try {
-      removeItem(item.id);
-      info(`${item.name} removed from cart`);
-    } catch (err) {
-      console.error(err);
-      error(`Failed to remove ${item.name}`);
-    }
+    removeItem(item.id);
+    info(`${item.name} removed from cart`);
   };
 
   const handleClearCart = () => {
-    try {
-      clearCart();
-      info("Cart cleared");
-    } catch (err) {
-      console.error(err);
-      error("Failed to clear cart");
-    }
+    clearCart();
+    info("Cart cleared");
   };
 
+  // ✅ ONLY open modal here
   const handlePlaceOrder = () => {
+    if (items.length === 0) {
+      info("Your cart is empty!");
+      return;
+    }
+    setShowCheckout(true);
+  };
+
+  const handleCheckoutSubmit = async (values) => {
+    const payload = {
+      items: items.map((item) => ({
+        menuItemId: item.id,
+        quantity: item.quantity,
+      })),
+      orderType: values.orderType,
+    };
+
     try {
-      if (items.length === 0) {
-        info("Your cart is empty!");
-        return;
-      }
+      const response = await createOrder(payload);
+
+      console.log("Order Response:", response);
+
       success("Order placed successfully!");
       clearCart();
+      setShowCheckout(false);
     } catch (err) {
       console.error(err);
-      error("Failed to place order");
+      error(err?.message || "Failed to place order");
     }
   };
 
   return (
     <div className={styles.card}>
-      {/* Cart Summary */}
       <h2 className={styles.title}>Cart Summary</h2>
 
       <div className={styles.summary}>
@@ -113,7 +118,6 @@ export default function CartCard() {
         </div>
       </div>
 
-      {/* Items */}
       <h3 className={styles.subtitle}>Your Items:</h3>
 
       <div className={styles.items}>
@@ -151,7 +155,6 @@ export default function CartCard() {
         ))}
       </div>
 
-      {/* Actions */}
       <div className={styles.actions}>
         <button className={styles.order} onClick={handlePlaceOrder}>
           <FaShoppingCart />
@@ -162,6 +165,13 @@ export default function CartCard() {
           Cancel
         </button>
       </div>
+
+      {showCheckout && (
+        <CheckoutModal
+          onClose={() => setShowCheckout(false)}
+          onSubmit={handleCheckoutSubmit}
+        />
+      )}
     </div>
   );
 }

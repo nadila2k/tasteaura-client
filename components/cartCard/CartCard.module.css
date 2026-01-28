@@ -155,12 +155,9 @@
   }
 
   .item {
-    grid-template-columns: 1fr auto 1fr auto; 
+    grid-template-columns: 60px 1fr auto auto auto;
     gap: 0.4rem;
-  }
-
-  .image {
-    display: none; 
+    padding: rem;
   }
 
   .controls button {
@@ -168,7 +165,7 @@
   }
 
   .actions {
-    align-items: center; 
+    align-items: center;
   }
 
   .order,
@@ -177,29 +174,31 @@
   }
 }
 
-
 @media (max-width: 47.99rem) {
   .card {
     font-size: 0.9rem;
   }
 
   .item {
-    grid-template-columns: 1fr auto; 
-    gap: 0.3rem;
+    grid-template-columns: 1fr auto auto auto;
+    gap: 0.5rem;
     padding: 0.3rem;
   }
 
   .image {
-    display: none; /* remove image for very small screens */
+    display: none;
   }
 
   .name {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+  }
+
+  .price {
+    font-size: 0.8rem;
   }
 
   .controls {
-    flex-direction: row; /* keep horizontal but smaller */
+    flex-direction: row;
     gap: 0.2rem;
   }
 
@@ -211,15 +210,12 @@
     min-width: 18px;
   }
 
-  .price {
-    font-size: 0.85rem;
-    font-weight: 500;
+  .delete {
+    padding: 0.3rem;
+    font-size: 0.75rem;
   }
 
-  .delete {
-    padding: 0.25rem;
-    font-size: 0.8rem;
-  }
+
 
   .title,
   .subtitle {
@@ -236,6 +232,4 @@
     padding: 0.3rem 0.8rem;
     font-size: 0.85rem;
   }
-
-
 }
