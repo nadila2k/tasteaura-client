@@ -1,0 +1,135 @@
+.section {
+  width: 100%;
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+.container {
+  width: 100%;
+  padding: 0 10%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* =====================
+   LEFT FORM
+   ===================== */
+
+.formBox h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.dots {
+  color: #f58220;
+  letter-spacing: 3px;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.form textarea {
+  resize: none;
+}
+
+.captcha {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  width: fit-content;
+}
+
+.submitBtn {
+  width: fit-content;
+  background: #f58220;
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* =====================
+   RIGHT INFO BOX
+   ===================== */
+
+.infoBox {
+  background: #2f2f2f;
+  color: #ffffff;
+  padding: 3rem;
+  text-align: center;
+}
+
+.subTitle {
+  color: #f58220;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.infoBox h3 {
+  font-size: 2rem;
+}
+
+.hours {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hours p {
+  color: #f58220;
+  margin-bottom: 0.5rem;
+}
+
+.hours h4 {
+  font-size: 1.6rem;
+  margin: 0.2rem 0;
+}
+
+.divider {
+  width: 2px;
+  height: 80px;
+  background: #f58220;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+
+@media (max-width: 74.99rem) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
