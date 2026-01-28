@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import styles from "./CartInfo.module.css";
 
-/* Enum for order statuses */
+
 const OrderStatus = {
   PENDING: "PENDING",
   CONFIRMED: "CONFIRMED",
@@ -14,7 +14,7 @@ const OrderStatus = {
   CANCELLED: "CANCELLED",
 };
 
-/* Tab info with button colors */
+
 const tabs = [
   { name: "ONGOING", colorClass: "ongoing" },
   { name: "COMPLETED", colorClass: "completed" },
@@ -24,9 +24,18 @@ const tabs = [
 export default function CartInfo({ orders = [] }) {
   const [tab, setTab] = useState("ONGOING");
 
-  const filteredOrders = useMemo(() => {
-    if (!orders || orders.length === 0) return [];
 
+   if (!orders || orders.length === 0) {
+    return (
+      <div className={styles.container}>
+        <p className={styles.empty}>No orders found.</p>
+      </div>
+    );
+  }
+  
+
+  const filteredOrders = useMemo(() => {
+  
     switch (tab) {
       case "ONGOING":
         return orders.filter((o) =>
@@ -55,11 +64,11 @@ export default function CartInfo({ orders = [] }) {
 
   return (
     <div className={styles.container}>
-      {/* Header */}
+ 
       <div className={styles.header}>
         <h2 className={styles.title}>My Orders</h2>
 
-        {/* Tabs */}
+      
         <div className={styles.filters}>
           {tabs.map((t) => (
             <button
@@ -75,7 +84,7 @@ export default function CartInfo({ orders = [] }) {
         </div>
       </div>
 
-      {/* Orders List */}
+    
       <div className={styles.orders}>
         {filteredOrders.length === 0 ? (
           <p className={styles.empty}>No {tab.toLowerCase()} orders</p>

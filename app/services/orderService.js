@@ -33,3 +33,28 @@ export async function getMyOrders() {
 
   return data;
 }
+
+
+export async function getCustomerCards() {
+
+  const session = await getServerSession(authOptions);
+
+  if (!session?.accessToken) {
+    throw new Error("UNAUTHORIZED");
+  }
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/dashboard/cards/customer`,
+    {
+      headers: {
+        Authorization: `Bearer ${session.accessToken}`,
+      },
+      cache: "no-store", 
+    }
+  );
+  const data = await res.json();
+  if (!res.ok) {
+    throw new Error(data?.message || "Failed to fetch customer cards");
+  }
+
+  return data;
+}

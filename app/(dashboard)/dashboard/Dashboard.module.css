@@ -11,15 +11,12 @@
   width: 100%;
   max-width: 900px;
 }
-
 .flexContainer h1 {
     color: var(--color-heading-main); 
 }
-
 .flexContainer h3 {
   color: var(--color-primary-dark);
 }
-
 
 
 @media (max-width: 74.99rem) {

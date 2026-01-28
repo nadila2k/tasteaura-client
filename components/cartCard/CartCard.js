@@ -92,8 +92,6 @@ export default function CartCard() {
     try {
       const response = await createOrder(payload);
 
-      console.log("Order Response:", response);
-
       success("Order placed successfully!");
       clearCart();
       setShowCheckout(false);

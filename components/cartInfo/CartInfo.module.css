@@ -1,6 +1,4 @@
-/* ========================================
-   BASE STYLES
-   ======================================== */
+
 .container {
   width: 100%;
   padding: 20px;
@@ -23,11 +21,11 @@
   color: #111;
 }
 
-/* ========================================
-   FILTER BUTTONS
-   ======================================== */
+
 .filters {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   gap: 10px;
   overflow-x: auto;
@@ -45,20 +43,20 @@
   letter-spacing: 0.5px;
 }
 
-/* Tab Colors */
+
 .ongoing {
-  background-color: #f59e0b; /* amber / yellow */
+  background-color: #f59e0b; 
 }
 
 .completed {
-  background-color: #10b981; /* green */
+  background-color: #10b981; 
 }
 
 .cancelled {
-  background-color: #ef4444; /* red */
+  background-color: #ef4444; 
 }
 
-/* Active state darker shade */
+
 .active.ongoing {
   background-color: #b45309;
 }
@@ -71,9 +69,7 @@
   background-color: #b91c1c;
 }
 
-/* ========================================
-   ORDERS LIST
-   ======================================== */
+
 .orders {
   display: flex;
   flex-direction: column;
@@ -100,7 +96,7 @@
   color: #111;
 }
 
-/* Status badges */
+
 .status {
   font-size: 0.75rem;
   padding: 5px 12px;

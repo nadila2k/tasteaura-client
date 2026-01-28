@@ -7,7 +7,8 @@
 }
 
 .section {
-  margin-bottom: var(--space-lg);
+  margin-bottom: 2.9rem;
+  margin-top: 7rem;
 }
 
 /* Flex Container */
@@ -77,8 +78,9 @@
     padding-right: 8%;
   }
 
-  .section {
-    margin-bottom: var(--space-md);
+   .section {
+    margin-top: 5rem;   
+ 
   }
 
   .flexContainer {
@@ -101,9 +103,9 @@
   }
 
   .section {
-    margin-bottom: var(--space-sm);
+    margin-top: 3rem;   
+    margin-bottom: 0rem;
   }
-
   .flexContainer {
     flex-direction: column;
     gap: var(--space-sm);

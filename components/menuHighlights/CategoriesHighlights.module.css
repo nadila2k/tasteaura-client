@@ -1,13 +1,13 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.4rem;          /* 🔥 small gap */
-  padding: 0.4rem;     /* 🔥 equal space on both sides */
+  gap: 0.4rem;          
+  padding: 0.4rem;     
   width: 100%;
   min-height: 500px;
 }
 
-/* Card wrapper */
+
 .card {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -15,7 +15,7 @@
   position: relative;
 }
 
-/* Image box */
+
 .image {
   width: 100%;
   height: 100%;
@@ -24,7 +24,7 @@
   position: relative;
 }
 
-/* Dark overlay for text readability */
+
 .overlay {
   position: absolute;
   inset: 0;
@@ -34,7 +34,7 @@
   justify-content: center;
 }
 
-/* Category name */
+
 .name {
   color: white;
   font-size: 1.25rem;
@@ -43,12 +43,10 @@
   text-transform: uppercase;
 }
 
-/* ========================================
-   RESPONSIVE - Tablet
-   ======================================== */
+
 @media (max-width: 74.99rem) {
   .grid {
-    grid-template-columns: repeat(3, 1fr); /* 🔥 keep 3 columns */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 0.35rem;
     padding: 0.35rem;
   }
@@ -58,12 +56,10 @@
   }
 }
 
-/* ========================================
-   RESPONSIVE - Mobile
-   ======================================== */
+
 @media (max-width: 47.99rem) {
   .grid {
-    grid-template-columns: repeat(2, 1fr); /* 🔥 2 columns only on mobile */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 0.3rem;
     padding: 0.3rem;
   }

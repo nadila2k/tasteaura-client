@@ -46,31 +46,38 @@ export default function SidebarToggle() {
               />
             </div>
           </Link>
-        </div>
 
-        <nav className={styles.navLinks}>
-          <Link
-            href="/dashboard"
-            className={styles.navLink}
-            onClick={() => setSidebarOpen(false)}
-          >
-            <FiHome size={20} /> Dashboard
-          </Link>
-          <Link
-            href="/checkout"
-            className={styles.navLink}
-            onClick={() => setSidebarOpen(false)}
-          >
-            <FiShoppingCart size={20} /> Cart
-          </Link>
-          <Link
-            href="/order-info"
-            className={styles.navLink}
-            onClick={() => setSidebarOpen(false)}
-          >
-            <FiClipboard size={20} /> Order Info
-          </Link>
-        </nav>
+          <nav className={styles.navLinks}>
+            <Link
+              href="/"
+              className={styles.navLink}
+              onClick={() => setSidebarOpen(false)}
+            >
+              <FiHome size={20} /> Home
+            </Link>
+            <Link
+              href="/dashboard"
+              className={styles.navLink}
+              onClick={() => setSidebarOpen(false)}
+            >
+              <FiHome size={20} /> Dashboard
+            </Link>
+            <Link
+              href="/checkout"
+              className={styles.navLink}
+              onClick={() => setSidebarOpen(false)}
+            >
+              <FiShoppingCart size={20} /> Cart
+            </Link>
+            <Link
+              href="/order-info"
+              className={styles.navLink}
+              onClick={() => setSidebarOpen(false)}
+            >
+              <FiClipboard size={20} /> Order Info
+            </Link>
+          </nav>
+        </div>
 
         <button
           onClick={handleLogout}

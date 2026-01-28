@@ -60,44 +60,71 @@
   text-align: center;
   text-decoration: none;
   color: white;
-  background-color: #ff8c00; /* Dark orange */
+  background-color: #ff8c00; 
   border-radius: 6px;
   transition: all 0.3s ease;
 }
 
 .ctaButton:hover {
   background-color: #e67e00;
-  color: var(--color-heading-sub); /* Slightly darker orange */
+  color: var(--color-heading-sub); 
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
-/* Responsive adjustments for small screens */
-@media (max-width: 768px) {
 
+@media (max-width: 74.99rem) {
   .heroSection {
-  height: 80vh;
+    height: 90vh;
+  }
 
-}
-  .flexContainer {
-    /* more padding on small screens */
-    gap: var(--space-lg); /* larger spacing between elements */
+  .container {
+    padding-left: 8%;
+    padding-right: 8%;
   }
 
   .flexContainer h1 {
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    margin-bottom: var(--space-lg);
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
   }
 
   .flexContainer h5 {
-    font-size: 1.25rem;
-    margin-bottom: var(--space-lg);
+    font-size: 1.35rem;
+    max-width: 600px;
   }
 
   .ctaButton {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.4rem;
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .heroSection {
+    height: 80vh;
+  }
+
+  .container {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .flexContainer {
+    gap: var(--space-lg);
+  }
+
+  .flexContainer h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .flexContainer h5 {
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+
+  .ctaButton {
+    font-size: 0.9rem;
     padding: var(--space-md) var(--space-lg);
-    margin-bottom: var(--space-lg);
   }
 }

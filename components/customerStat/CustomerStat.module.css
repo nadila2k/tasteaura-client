@@ -1,0 +1,101 @@
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+
+.card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.iconWrapper {
+  margin-right: 1rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  color: inherit;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.title {
+  font-size: 0.9rem;
+  color: #6b7280; 
+  margin: 0;
+}
+
+.value {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0.2rem 0 0 0;
+  color: #111827; 
+}
+
+
+@media (max-width: 74.99rem) {
+  .cardContainer {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .iconWrapper {
+    font-size: 1.8rem;
+  }
+
+  .title {
+    font-size: 0.85rem;
+  }
+
+  .value {
+    font-size: 1.3rem;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Mobile
+   ======================================== */
+@media (max-width: 47.99rem) {
+  .cardContainer {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.8rem;
+  }
+
+  .card {
+    padding: 0.8rem;
+  }
+
+  .iconWrapper {
+    font-size: 1.5rem;
+    margin-right: 0.6rem;
+  }
+
+  .title {
+    font-size: 0.8rem;
+  }
+
+  .value {
+    font-size: 1.1rem;
+  }
+}

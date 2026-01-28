@@ -3,7 +3,11 @@
   max-width: 100%;
   padding-left: 10%;
   padding-right: 10%;
-  height: 100%;
+  height: 60vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ourstorysection {
@@ -13,9 +17,9 @@
 .flexContainer {
   position: relative;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  text-align: center; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   gap: var(--space-lg);
 }
 
@@ -36,39 +40,35 @@
 
 .textContent h1,
 .textContent h2 {
-  color: var(--color-heading-main); /* black */
+  color: var(--color-heading-main);
 }
 
 .textContent h3 {
-  color: var(--color-primary-dark); /* dark gold/orange */
+  color: var(--color-primary-dark);
 }
 
 .textContent p {
-  color: var(--color-heading-sub); /* grey */
+  color: var(--color-heading-sub);
 }
 
-/* ==========================
-   Tablet (48rem – 74.99rem)
-   ========================== */
 @media (max-width: 74.99rem) {
-
   .container {
-    padding-left: 8%;   /* smaller percentage for tablet */
-    padding-right: 8%;
+    padding-inline: 8%;
+    min-height: auto;
   }
   .ourstorysection {
     margin-bottom: var(--space-md);
   }
 
   .flexContainer {
-    flex-direction: column; /* stack text above logo */
-     gap: var(--space-md); 
-    align-items: center; /* center items horizontally */
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
     text-align: center;
   }
 
   .logoWrapper img {
-    width: 200px; /* smaller logo */
+    width: 200px;
   }
 
   .textContent h1 {
@@ -90,22 +90,20 @@
    ========================== */
 @media (max-width: 47.99rem) {
   .ourstorysection {
-    margin-bottom: var(--space-sm); 
-
+    margin-bottom: var(--space-sm);
   }
-.container {
-    padding-left: 5%;   /* smaller percentage for mobile */
-    padding-right: 5%;
+  .container {
+    padding-inline: 5%;
   }
   .flexContainer {
-    flex-direction: column; /* stack text above logo */
+    flex-direction: column;
     margin-bottom: var(--space-sm);
-    align-items: center; /* center items horizontally */
+    align-items: center;
     text-align: center;
   }
 
   .logoWrapper img {
-    width: 150px; /* mobile logo */
+    width: 150px;
   }
 
   .textContent h1 {

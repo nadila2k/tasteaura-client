@@ -19,12 +19,12 @@ export default function CategorieGrid({
         <Image
           src={category.imageUrl}
           alt={category.name}
-          className={styles.image}
           fill
           priority
+          sizes="(max-width: 48rem) 192px, (max-width: 75rem) 224px, 256px"
         />
       </div>
-       <p className={styles.text}>{category.name}</p>
+      <p className={styles.text}>{category.name}</p>
     </button>
   );
 }

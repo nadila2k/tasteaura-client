@@ -31,8 +31,8 @@
 
 .logoWrapper {
   position: relative;
-  width: 200px;
-  height: 70px;
+   width: 250px; /* increase from 200px */
+  height: 90px; 
 }
 
 .logoImage {
@@ -44,6 +44,7 @@
   flex-direction: column;
   gap: 0.8rem;
   margin-top: 0.5rem;
+  
 }
 
 .navLink {
@@ -98,13 +99,20 @@
 }
 
 @media (max-width: 74.99rem) {
+
+
+  .logoWrapper {
+    width: 200px;
+    height: 70px;
+  }
+
   .sidebar {
-    transform: translateX(-100%); /* hidden by default */
+    transform: translateX(-100%); 
     border-radius: 0 2rem 2rem 0;
   }
 
   .sidebarOpen {
-    transform: translateX(0); /* show when active */
+    transform: translateX(0); 
   }
 
   .sidebarOverlay {
@@ -150,7 +158,10 @@
     transform: translateX(-100%);
     border-radius: 0 2rem 2rem 0;
   }
-
+  .logoWrapper {
+    width: 150px;
+    height: 60px;
+  }
   .sidebarOpen {
     transform: translateX(0);
   }
