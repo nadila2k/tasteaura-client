@@ -70,6 +70,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-xl);
+  margin-top: 3rem;
 }
 
 /* ====== Responsive ====== */

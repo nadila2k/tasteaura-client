@@ -16,7 +16,7 @@
 /* Image block */
 .imageBlock {
   position: relative;
-  width: 100%;
+  width: 85%;
   aspect-ratio: 4 / 3; /* or whatever fits your design */
   display: flex;
   justify-content: center;
