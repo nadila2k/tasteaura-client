@@ -1,20 +1,12 @@
 "use client";
+import "./error.css";
 
 export default function GlobalError({ error, reset }) {
-  console.error("Global error:", error);
-
   return (
-    <html>
-      <body>
-        <div style={{ padding: "2rem", textAlign: "center" }}>
-          <h2>Something went wrong</h2>
-          <p>{error.message || "Unexpected error occurred."}</p>
-
-          <button onClick={() => reset()}>
-            Try again
-          </button>
-        </div>
-      </body>
-    </html>
+    <div className="error-container">
+      <h1>Oops! Something went wrong</h1>
+      <p>{error?.message || "An unexpected error occurred."}</p>
+      <button onClick={() => reset()}>Try Again</button>
+    </div>
   );
 }

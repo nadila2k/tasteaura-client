@@ -1,0 +1,78 @@
+/* error.css */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+    background-color: #faecb4 
+}
+
+.error-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.error-container h1 {
+  color: #e53e3e;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.error-container p {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.error-container button {
+  background-color: #e53e3e;
+  color: white;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.error-container button:hover {
+  background-color: #c53030;
+}
+
+@media (max-width: 74.99rem) {
+  .error-container {
+    padding: 1.8rem;
+  }
+
+  .error-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .error-container p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .error-container {
+    padding: 1.5rem;
+  }
+
+  .error-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .error-container p {
+    font-size: 0.9rem;
+  }
+
+  .error-container button {
+    padding: 0.5rem 1.2rem;
+  }
+}
