@@ -8,7 +8,7 @@ export default function AboutUsPage() {
       <section className={styles.section}>
         <div className={styles.overlay} />
 
-        <div className={`${styles.container} ${styles.content}`}>
+        <div className={styles.container}>
           <h1 className={styles.heroText}>About our Restaurant</h1>
         </div>
       </section>

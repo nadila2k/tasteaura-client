@@ -15,6 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   overflow: hidden;
 }
 
@@ -57,6 +58,7 @@
   background-color: #6e5004;
   border-radius: 2px;
 }
+
 
 .container,
 .heroText {
