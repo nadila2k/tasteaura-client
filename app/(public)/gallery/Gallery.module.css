@@ -1,4 +1,4 @@
-/* Gallery.module.css */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -39,8 +39,10 @@
 
 @media (max-width: 47.99rem) {
   .grid {
-    grid-template-columns: 1fr;
+  gap: 0.5rem;
   }
+
+  
   
   .title {
     font-size: 2rem;

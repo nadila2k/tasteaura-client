@@ -1,10 +1,10 @@
 import { getToken } from "next-auth/jwt";
 import { NextResponse } from "next/server";
 
-export async function middleware(req) {
+export async function proxy(req) {
   const token = await getToken({
     req,
-    secret: process.env.NEXTAUTH_SECRET, // required
+    secret: process.env.NEXTAUTH_SECRET,
   });
 
   const { pathname } = req.nextUrl;
@@ -20,20 +20,18 @@ export async function middleware(req) {
   // Protect /dashboard
   if (pathname.startsWith("/dashboard")) {
     if (!token) {
-      // Not logged in → redirect to signin
       return NextResponse.redirect(new URL("/auth/signin", req.url));
     }
 
-    // Optional: role check
     if (token.role !== "CUSTOMER") {
       return NextResponse.redirect(new URL("/", req.url));
     }
   }
 
   return NextResponse.next();
-};
+}
 
-// Apply middleware only to relevant routes
+// Only apply proxy to relevant routes
 export const config = {
-  matcher: ["/dashboard/:path*"], // important
+  matcher: ["/dashboard/:path*"],
 };

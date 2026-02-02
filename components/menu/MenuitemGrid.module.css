@@ -1,17 +1,17 @@
 .menuCard {
-  width: 12rem; /* slightly smaller than before */
-  background-color: rgba(255, 255, 255, 0.1); /* white/10 */
-  border-radius: 0.75rem; /* slightly smaller rounded corners */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* softer shadow */
+  width: 12rem; 
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 0.75rem; 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); 
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: #fcd34d; /* amber-100 */
-  padding: 0.75rem; /* slightly smaller padding */
+  color: #fcd34d; 
+  padding: 0.75rem; 
   transition: transform 0.3s, box-shadow 0.3s;
-  flex-shrink: 0; /* prevent shrinking in a flex container */
+  flex-shrink: 0; 
 }
 
 .menuCard:hover {

@@ -3,10 +3,10 @@
   max-width: 100%;
   padding-left: 10%;
   padding-right: 10%;
-  height: 80vh;            /* 👈 vh-based height */
+  height: 80vh;
   display: flex;
-  justify-content: center;     /* horizontal center */
-  align-items: center;         /* vertical center */
+  justify-content: center;
+  align-items: center;
 }
 
 .facilitiesSection {
@@ -74,7 +74,6 @@
   text-align: center;
 }
 
-
 .imageOverlay {
   position: absolute;
   inset: 0;
@@ -83,10 +82,10 @@
     rgba(255, 255, 255, 0.75),
     rgba(255, 255, 255, 0.35)
   );
- display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: end; 
-  align-items: center; 
+  justify-content: end;
+  align-items: center;
   padding: 2rem;
   color: #111;
 }
@@ -147,9 +146,9 @@
    RESPONSIVE - Tablet
    ======================================== */
 @media (max-width: 74.99rem) {
-   .container {
+  .container {
     padding-inline: 8%;
-    min-height: auto;        
+    min-height: auto;
   }
 
   .facilitiesSection {
@@ -158,7 +157,7 @@
 
   .flexContainer {
     flex-direction: column;
-    gap: var(--space-md);
+    gap: 0;
   }
 
   .flexContainer > .textContent {
@@ -199,7 +198,7 @@
    RESPONSIVE - Mobile
    ======================================== */
 @media (max-width: 47.99rem) {
-   .container {
+  .container {
     padding-inline: 5%;
   }
 
@@ -208,6 +207,7 @@
   }
 
   .flexContainer {
+        flex-direction: column;
     gap: var(--space-sm);
   }
 

@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-/* Limit content width */
+
 .flexContainer > * {
   width: 100%;
   max-width: 900px;
@@ -50,7 +50,7 @@
     max-width: 100%;
   }
 
-  /* ✅ Scoped headings (CSS Modules safe) */
+
   .flexContainer h1 {
     font-size: 2rem;
   }
