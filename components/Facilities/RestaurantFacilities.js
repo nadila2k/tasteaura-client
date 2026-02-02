@@ -12,7 +12,7 @@ export default function RestaurantFacilities() {
 
   const activeFacility = facilities.find((f) => f.id === activeId);
 
-  // Handlers for manual slider
+
   const handlePrev = () => {
     const currentIndex = facilities.findIndex((f) => f.id === activeId);
     const prevIndex = (currentIndex - 1 + facilities.length) % facilities.length;

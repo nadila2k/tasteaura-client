@@ -116,8 +116,8 @@
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   border: none;
-  width: 40px; /* fixed width for circle */
-  height: 40px; /* fixed height for circle */
+  width: 40px; 
+  height: 40px; 
   font-size: 1.25rem;
   border-radius: 50%;
   cursor: pointer;
@@ -200,6 +200,7 @@
 @media (max-width: 47.99rem) {
   .container {
     padding-inline: 5%;
+     height: auto;
   }
 
   .facilitiesSection {
