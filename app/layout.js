@@ -4,7 +4,8 @@ import ToastProvider from "@/components/toastProvider/ToastProvider";
 import { SessionProvider } from "next-auth/react";
 import { Providers } from "./providers";
 
-// Elegant restaurant font pairing
+
+
 const headingFont = Playfair_Display({
   subsets: ["latin"],
   weight: ["600", "700"],
@@ -22,6 +23,11 @@ const bodyFont = Lato({
 export const metadata = {
   title: "TasteAura | Restaurant",
   description: "Premium dining experience",
+  icons: {
+    icon: "/tasteaura-logo.png",
+    shortcut: "/tasteaura-logo.png",
+    apple: "/tasteaura-logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -30,7 +36,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${headingFont.variable} ${bodyFont.variable} antialiased`}
       >
-       <Providers>{children}</Providers>
+        <Providers>{children}</Providers>
         <ToastProvider />
       </body>
     </html>
