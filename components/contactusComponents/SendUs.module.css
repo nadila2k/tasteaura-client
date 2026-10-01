@@ -23,7 +23,7 @@
 }
 
 .dots {
-  color: #f58220;
+  color: var(--accent);
   letter-spacing: 3px;
   display: inline-block;
   margin-bottom: 2rem;
@@ -64,8 +64,8 @@
 
 .submitBtn {
   width: fit-content;
-  background: #f58220;
-  color: #ffffff;
+  background: var(--accent);
+  color: var(--surface);
   border: none;
   padding: 0.9rem 2rem;
   font-size: 0.95rem;
@@ -81,13 +81,13 @@
 
 .infoBox {
   background: #2f2f2f;
-  color: #ffffff;
+  color: var(--surface);
   padding: 3rem;
   text-align: center;
 }
 
 .subTitle {
-  color: #f58220;
+  color: var(--accent);
   font-style: italic;
   margin-bottom: 0.5rem;
 }
@@ -105,7 +105,7 @@
 }
 
 .hours p {
-  color: #f58220;
+  color: var(--accent);
   margin-bottom: 0.5rem;
 }
 
@@ -117,7 +117,7 @@
 .divider {
   width: 2px;
   height: 80px;
-  background: #f58220;
+  background: var(--accent);
 }
 
 /* =====================

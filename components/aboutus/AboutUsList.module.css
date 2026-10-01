@@ -39,16 +39,16 @@
 
 /* Text styles */
 .textBlock h1 {
-  color: var(--color-heading-main);
+  color: var(--text);
 }
 
 .textBlock h3 {
-  color: var(--color-primary-dark);
+  color: var(--primary-hover);
 }
 
 .textBlock p,
 .fullWidth p {
-  color: var(--color-heading-sub);
+  color: var(--text-muted);
   font-size: 1rem;
 }
 

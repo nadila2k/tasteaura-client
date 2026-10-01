@@ -2,7 +2,7 @@
    BASE STYLES
    ======================================== */
 .card {
-  background: var(--color-surface);
+  background: var(--surface);
   padding: var(--space-lg);
   border-radius: 14px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
@@ -43,7 +43,7 @@
   gap: var(--space-sm);
   padding: var(--space-sm);
   border-radius: 12px;
-  background: #fafafa;
+  background: var(--bg-soft);
 }
 
 .image {
@@ -62,10 +62,10 @@
 }
 
 .controls button {
-  background: #eaeaea;
+  background: var(--border);
   padding: 0.4rem;
   border-radius: 6px;
-  color: #333;
+  color: var(--text);
 }
 
 .controls span {
@@ -78,19 +78,19 @@
 }
 
 .delete {
-  background: #ff3b3b;
+  background: var(--danger);
   color: white;
   padding: 0.5rem;
   border-radius: 8px;
 }
 
 .emptyCard {
-  background: var(--color-surface);
+  background: var(--surface);
   padding: var(--space-xl);
   border-radius: 14px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
   text-align: center;
-  color: var(--color-muted);
+  color: var(--text-muted);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,19 +98,19 @@
 }
 
 .emptyCard h3 {
-  color: var(--color-heading-main);
+  color: var(--text);
 }
 
 .emptyCard svg {
-  color: var(--color-primary);
+  color: var(--primary);
 }
 
 .menuButton {
   display: inline-block;
   margin-top: var(--space-md);
   padding: 0.5rem 1.2rem;
-  background-color: var(--color-primary);
-  color: #fff;
+  background-color: var(--primary);
+  color: var(--surface);
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
@@ -119,7 +119,7 @@
 }
 
 .menuButton:hover {
-  background-color: #f6fa09;
+  background-color: var(--primary-hover);
 }
 
 /* ================= ACTIONS ================= */
@@ -131,7 +131,7 @@
 }
 
 .order {
-  background: #2f6fff;
+  background: var(--success);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -139,7 +139,7 @@
 }
 
 .cancel {
-  background: #ff3b3b;
+  background: var(--danger);
   display: flex;
   align-items: center;
   gap: 0.5rem;

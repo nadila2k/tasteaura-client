@@ -1,6 +1,6 @@
 .menuCard {
   width: 12rem; 
-  background-color: rgba(255, 255, 255, 0.1); 
+  background-color:rgb(252, 214, 147); 
   border-radius: 0.75rem; 
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); 
   overflow: hidden;
@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: #fcd34d; 
+  color: var(--warning); 
   padding: 0.75rem; 
   transition: transform 0.3s, box-shadow 0.3s;
   flex-shrink: 0; 
@@ -37,13 +37,13 @@
   margin-top: 0.25rem;
   font-size: 1.125rem; 
   font-weight: 700;
-  color: #fbbf24; 
+  color: var(--accent); 
 }
 
 .orderButton {
   margin-top: 0.75rem;
   padding: 0.4rem 1rem; 
-  background-color: #f59e0b; 
+  background-color: var(--accent); 
   color: white;
   border-radius: 9999px; 
   font-weight: 600;
@@ -52,7 +52,7 @@
 }
 
 .orderButton:hover {
-  background-color: #d97706; /* amber-600 */
+  background-color: var(--accent); /* amber-600 */
 }
 
 

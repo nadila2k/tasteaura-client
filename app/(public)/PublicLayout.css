@@ -1,4 +1,4 @@
 .public-layout {
-  background-color: #faecb4 !important;
+  background-color: var(--bg) !important;
   min-height: 100vh !important;
 }

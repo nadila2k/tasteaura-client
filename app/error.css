@@ -5,11 +5,11 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-    background-color: #faecb4 
+  background-color: var(--bg);
 }
 
 .error-container {
-  background-color: #ffffff;
+  background-color: var(--surface);
   padding: 2rem;
   max-width: 400px;
   width: 90%;
@@ -19,7 +19,7 @@ body {
 }
 
 .error-container h1 {
-  color: #e53e3e;
+  color: var(--danger);
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -31,7 +31,7 @@ body {
 }
 
 .error-container button {
-  background-color: #e53e3e;
+  background-color: var(--danger);
   color: white;
   font-weight: 600;
   padding: 0.6rem 1.5rem;
@@ -42,7 +42,7 @@ body {
 }
 
 .error-container button:hover {
-  background-color: #c53030;
+  background-color: var(--danger);
 }
 
 @media (max-width: 74.99rem) {

@@ -18,7 +18,7 @@
   transform: translateY(-20px);
   transition: transform 0.35s ease, opacity 0.35s ease;
   margin-top: 70px; /* below header */
-  color: #fff;
+  color: var(--surface);
 }
 
 /* Slide animation */

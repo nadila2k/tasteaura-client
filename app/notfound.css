@@ -3,12 +3,12 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #faecb4;
+  background-color: var(--bg);
 }
 
 .notfound-container {
   text-align: center;
-  background-color: #ffffff;
+  background-color: var(--surface);
   padding: 2rem;
   max-width: 450px;
   width: 90%;
@@ -19,19 +19,19 @@ body {
 .notfound-container h1 {
   font-size: 3rem;
   font-weight: bold;
-  color: #2d3748;
+  color: var(--text);
   margin-bottom: 1rem;
 }
 
 .notfound-container p {
   font-size: 1rem;
-  color: #4a5568;
+  color: var(--text-muted);
   margin-bottom: 1.5rem;
 }
 
 .notfound-container a {
   display: inline-block;
-  background-color: #3182ce;
+  background-color: var(--primary);
   color: white;
   font-weight: 600;
   padding: 0.6rem 1.5rem;
@@ -41,7 +41,7 @@ body {
 }
 
 .notfound-container a:hover {
-  background-color: #2b6cb0;
+  background-color: var(--primary);
 }
 
 @media (max-width: 74.99rem) {

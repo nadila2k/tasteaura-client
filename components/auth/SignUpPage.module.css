@@ -2,7 +2,7 @@
 .container {
   height: 100vh;
   width: 100%;
-  background-color: #000;
+  background-color: var(--text);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
 
 /* Form wrapper */
 .formWrapper {
-  background-color: #111;
+  background-color: var(--text);
   padding: 3rem;
   border-radius: 1rem;
   width: 30rem;
@@ -34,7 +34,7 @@
 
 /* Company name */
 .companyName {
-  color: var(--color-primary);
+  color: var(--primary);
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -42,7 +42,7 @@
 
 /* Subtitle */
 .subtitle {
-  color: #ccc;
+  color: var(--text-muted);
   margin-bottom: 2rem;
   font-size: 1rem;
 }
@@ -62,7 +62,7 @@
 }
 
 .inputGroup label {
-  color: #fff;
+  color: var(--surface);
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
@@ -71,19 +71,19 @@
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   border: 1px solid #333;
-  background-color: #222;
-  color: #fff;
+  background-color: var(--text);
+  color: var(--surface);
   outline: none;
   transition: border-color 0.3s;
 }
 
 .inputGroup input:focus {
-  border-color: #00bfff;
+  border-color: var(--primary);
 }
 
 /* Error text */
 .error {
-  color: #ff4d4f;
+  color: var(--danger);
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
@@ -93,15 +93,15 @@
   padding: 0.75rem 1rem;
   border: none;
   border-radius: 0.5rem;
-  background-color: #00bfff;
-  color: #000;
+  background-color: var(--primary);
+  color: var(--text);
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
 }
 
 .formWrapper button:hover:not(:disabled) {
-  background-color: #009acd;
+  background-color: var(--primary);
   transform: translateY(-2px);
 }
 
@@ -113,18 +113,18 @@
 /* Signup link */
 .signupText {
   margin-top: 1.5rem;
-  color: #ccc;
+  color: var(--text-muted);
   font-size: 0.95rem;
 }
 
 .signupLink {
-  color: #00bfff;
+  color: var(--primary);
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .signupLink:hover {
-  color: #009acd;
+  color: var(--primary);
 }
 
 /* ========================================

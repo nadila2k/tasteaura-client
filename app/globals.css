@@ -1,24 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-bg: var(--bg);
+  --color-bg-soft: var(--bg-soft);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-sale-badge: var(--sale-badge);
+}
+
 /* ========================================
-   GLOBAL STYLES - Restaurant Website
+   GLOBAL STYLES - Modern E-Commerce
    Desktop-First
    ======================================== */
 
 /* 1️⃣ CSS Variables */
 :root {
-  /* COLORS */
-  --color-bg: #fffaf5;
-  --color-surface: #ffffff;
-  --color-section: #fdf5e6;
-  --color-text: #333333;
-  --color-muted: #666666;
-  --color-heading: #111111;
-  --color-subheading: #555555;
-  --color-primary: #b8860b;
-  --color-primary-dark: #a67c3a;
-  --color-link: #c59d5f;
-  --color-link-hover: #a67c3a;
-  --color-heading-main: #000000;
-  --color-heading-sub: #3a3a3a;
+  color-scheme: light;
+  
+  /* COLORS - Vibrant & Clean */
+  --primary: #a8a8a8;       /* Indigo 600 - Trustworthy main color */
+  --primary-hover: #797979; /* Indigo 700 */
+  --secondary: #ec4899;     /* Pink 500 - Playful secondary */
+  --accent: #f97316;        /* Orange 500 - Warm accent for buttons/sale */
+  
+  --bg: #ffedd5;            /* Orange 100 - Colorful, warm, appetizing background */
+  --bg-soft: #fed7aa;       /* Orange 200 - Deeper colorful contrast */
+  --surface: #ffffff;       /* White - Card backgrounds (to pop off the colorful bg) */
+  --border: #fdba74;        /* Orange 300 - Colorful borders */
+  
+  --text: #0f172a;          /* Slate 900 - High contrast text */
+  --text-muted: #2c343e;    /* Slate 500 - Secondary text */
+  
+  --success: #10b981;       /* Emerald 500 */
+  --warning: #f59e0b;       /* Amber 500 */
+  --danger: #ef4444;        /* Red 500 */
+  --sale-badge: #f43f5e;    /* Rose 500 */
 
   /* SPACING */
   --space-xs: 1rem;
@@ -44,9 +69,11 @@
 /* 3️⃣ Body */
 body {
   font-family: var(--font-body);
-  font-size: 1.2rem; /* Desktop default */
+  font-size: 1.2rem;
   line-height: 1.6;
-  color: var(--color-text);
+  color: var(--text);
+  background: linear-gradient(135deg, #ffedd5 0%, #fef08a 50%, #fbcfe8 100%);
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -58,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   letter-spacing: 0.03em;
   margin-bottom: var(--space-sm);
-  color: var(--color-heading-main);
+  color: var(--text);
 }
 
 h1 { font-size: 2.8rem; }
@@ -68,8 +95,7 @@ h4 { font-size: 1.6rem; }
 
 /* 5️⃣ Paragraphs */
 p {
-  /* margin-bottom: var(--space-md); */
-  color: var(--color-heading-sub);
+  color: var(--text-muted);
 }
 
 /* 6️⃣ Links */
@@ -80,26 +106,47 @@ a {
 }
 
 a:hover {
-  color: var(--color-primary);
+  color: var(--primary);
 }
 
-/* 7️⃣ Buttons */
+/* 7️⃣ Buttons & Interactive Elements */
 button {
   font-family: inherit;
   border: none;
   cursor: pointer;
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
   color: white;
   padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2), 0 2px 4px -2px rgba(79, 70, 229, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  font-weight: 600;
 }
 
 button:hover {
-  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px -2px rgba(79, 70, 229, 0.3), 0 3px 6px -3px rgba(79, 70, 229, 0.3);
 }
 
-/* 8️⃣ Utility Spacing */
+button:active {
+  transform: translateY(0);
+}
+
+/* 8️⃣ Utility Cards */
+.card, .surface {
+  background-color: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.025);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--border);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+}
+
+/* 9️⃣ Utility Spacing */
 .m-xs { margin: var(--space-xs); }
 .m-sm { margin: var(--space-sm); }
 .m-md { margin: var(--space-md); }
@@ -112,7 +159,7 @@ button:hover {
 .p-lg { padding: var(--space-lg); }
 .p-xl { padding: var(--space-xl); }
 
-/* 9️⃣ Container System */
+/* 🔟 Container System */
 .container {
   padding-left: clamp(1rem, 4vw, 3rem);
   padding-right: clamp(1rem, 4vw, 3rem);

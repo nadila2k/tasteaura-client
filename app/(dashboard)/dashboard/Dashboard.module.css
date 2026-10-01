@@ -12,10 +12,10 @@
   max-width: 900px;
 }
 .flexContainer h1 {
-    color: var(--color-heading-main); 
+    color: var(--text); 
 }
 .flexContainer h3 {
-  color: var(--color-primary-dark);
+  color: var(--primary-hover);
 }
 
 

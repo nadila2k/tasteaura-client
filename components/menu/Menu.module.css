@@ -17,15 +17,24 @@
 }
 
 .categoriesGrid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  grid-template-columns: repeat(6, 1fr);
+  width: 100%;
+ 
+}
+
+/* 6 columns layout for desktop (5 gaps of 1.5rem) */
+.categoriesGrid > * {
+  flex: 0 0 calc((100% - (5 * 1.5rem)) / 6);
+  
 }
 
 .selectedCategoryTitle {
-  color: #fbbf24;
+  color: var(--accent);
   font-size: 1.875rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -36,6 +45,8 @@
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
 }
+
+
 
 
 .searchWrapper {
@@ -51,7 +62,7 @@
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(0, 0, 0, 0.4);
-  color: #fff;
+  color: var(--surface);
   font-size: 0.95rem;
 }
 

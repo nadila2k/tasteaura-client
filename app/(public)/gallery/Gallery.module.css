@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #171717;
+  background-color: var(--bg);
   min-height: 100vh;
   padding-top: 6rem;
   padding-bottom: 3rem;
@@ -14,7 +14,7 @@
   font-weight: 800;
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-  color: #fbbf24;
+  color: var(--color-heading);
   text-decoration: underline;
   text-decoration-color: rgba(251, 191, 36, 0.5);
   filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.25));

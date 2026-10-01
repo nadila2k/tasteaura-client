@@ -7,7 +7,7 @@
   margin-right: 1rem;                  
   font-size: 1.2rem;
   font-family: var(--font-heading);
-  color: #666;
+  color: var(--text-muted);
   cursor: pointer;
   transition:
     color 0.2s ease,
@@ -15,14 +15,14 @@
 }
 
 .button:hover {
-  color: #111;                        
-  border-bottom-color: #111;          
+  color: var(--text);                        
+  border-bottom-color: var(--text);          
 }
 
 
 .active {
-  color: #000;                        
-  border-bottom-color: #000;          
+  color: var(--text);                        
+  border-bottom-color: var(--text);          
 }
 
 /* ========================================

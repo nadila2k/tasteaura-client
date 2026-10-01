@@ -3,9 +3,9 @@
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
-  background: #fafafa;
+  background: var(--bg-soft);
   border-radius: 12px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid var(--border);
 }
 
 .header {
@@ -18,7 +18,7 @@
 .title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #111;
+  color: var(--text);
 }
 
 
@@ -38,22 +38,22 @@
   border-radius: 25px;
   border: 1px solid transparent;
   cursor: pointer;
-  color: #fff;
+  color: var(--surface);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 
 .ongoing {
-  background-color: #f59e0b; 
+  background-color: var(--accent); 
 }
 
 .completed {
-  background-color: #10b981; 
+  background-color: var(--success); 
 }
 
 .cancelled {
-  background-color: #ef4444; 
+  background-color: var(--danger); 
 }
 
 
@@ -62,7 +62,7 @@
 }
 
 .active.completed {
-  background-color: #047857;
+  background-color: var(--success);
 }
 
 .active.cancelled {
@@ -77,10 +77,10 @@
 }
 
 .orderCard {
-  border: 1px solid #e2e2e2;
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 16px;
-  background: #fff;
+  background: var(--surface);
 }
 
 .orderTop {
@@ -93,7 +93,7 @@
 .orderId {
   font-weight: 600;
   font-size: 1rem;
-  color: #111;
+  color: var(--text);
 }
 
 
@@ -103,24 +103,24 @@
   border-radius: 20px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--surface);
 }
 
 .pending {
-  background-color: #f59e0b;
+  background-color: var(--accent);
 }
 
 .completedStatus {
-  background-color: #10b981;
+  background-color: var(--success);
 }
 
 .cancelledStatus {
-  background-color: #ef4444;
+  background-color: var(--danger);
 }
 
 .meta {
   font-size: 0.85rem;
-  color: #555;
+  color: var(--text-muted);
   margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
@@ -138,13 +138,13 @@
   display: flex;
   justify-content: space-between;
   font-size: 0.85rem;
-  color: #333;
+  color: var(--text);
 }
 
 .empty {
   text-align: center;
   font-size: 0.95rem;
-  color: #888;
+  color: var(--text-muted);
   padding: 30px 0;
 }
 
